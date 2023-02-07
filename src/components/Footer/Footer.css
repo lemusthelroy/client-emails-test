@@ -1,0 +1,34 @@
+.footer {
+  background-color: var(--secondary-accent-color);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1em;
+  color: var(--inverse-text);
+  transition: all 0.5s ease-in-out;
+}
+
+.footer-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.footer-icon {
+  width: 2em;
+  align-items: center;
+  margin: 0.5em;
+  transform: scale(100%);
+  transition: all 0.5s ease-in-out;
+}
+
+.footer-item:hover .footer-icon {
+  transform: scale(120%);
+  transition: all 0.2s ease-in-out;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer-text {
+    display: none;
+  }
+}

@@ -1,0 +1,17 @@
+.projects {
+  color: var(--text-color);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.projects-title {
+  color: var(--secondary-accent-color);
+  font-size: x-large;
+  margin-bottom: 1.5em;
+  font-weight: 500;
+  transition: all 0.5s ease-in-out;
+}

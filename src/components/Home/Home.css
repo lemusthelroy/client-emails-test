@@ -1,0 +1,142 @@
+.home-wrapper {
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  white-space: pre;
+}
+
+.email-link {
+  background-color: var(--accent-color);
+  font-weight: bold;
+  padding: 0.1em;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+  padding-bottom: 0.3em;
+  border-radius: 0.5em;
+  color: var(--text-color);
+  opacity: 100%;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.email-link:hover {
+  background-color: var(--secondary-accent-color);
+  color: var(--background-color);
+  transition: all 0.2s ease-in-out;
+}
+
+.intro {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  transform: scale(100%);
+  font-size: 6em;
+  color: var(--secondary-accent-color);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-weight: 400;
+}
+
+.intro .bold {
+  transform: scale(150%);
+  transition: all 0.2s;
+}
+
+.intro .semi-bold {
+  transform: scale(125%);
+  transition: all 0.2s;
+}
+
+.intro .normal {
+  transform: scale(100%);
+  transition: all 0.4s;
+}
+
+.intro-text {
+  flex-wrap: wrap;
+}
+
+p {
+  word-break: keep-all;
+  white-space: normal;
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.download-cv {
+  text-decoration: none;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border: 2px solid var(--secondary-accent-color);
+  padding: 0.5em;
+  margin: 1em;
+  border-radius: 0.5em;
+  width: min-content;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.download-cv:hover {
+  background-color: var(--secondary-accent-color);
+  color: var(--inverse-text);
+  transition: all 0.3s ease-in-out;
+}
+
+.download-cv::before {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  position: absolute;
+  top: -1.5em;
+  left: 4.25em;
+  content: "↓";
+  font-size: larger;
+  border-radius: 0.5em;
+  transition: all 0.3s ease-in-out;
+  color: var(--text-color);
+}
+
+.download-cv:hover.download-cv::before {
+  top: 0em;
+  background-color: transparent;
+  color: var(--inverse-text);
+}
+
+.bucket {
+  border: 2px solid var(--text-color);
+  border-top: none;
+  width: 0.8em;
+  height: 0.2em;
+  margin-top: 0.8em;
+  transition: all 0.5s ease-in-out;
+}
+
+.download-cv:hover .bucket {
+  transition: all 0.3s ease-in-out;
+  border: 2px solid var(--inverse-text);
+  border-top: none;
+}
+
+@media only screen and (width > 900px) {
+  .home-name {
+    color: aquamarine;
+    display: none;
+  }
+}

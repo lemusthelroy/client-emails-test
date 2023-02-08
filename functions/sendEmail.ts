@@ -15,16 +15,16 @@ const handler: Handler = async function (event) {
     from: string;
     to: string;
     subject: string;
-    parameters : {
-      name : string,
-      email : string,
-      message : string,
-    }
+    parameters: {
+      name: string;
+      email: string;
+      message: string;
+    };
   };
 
   //automatically generated snippet from the email preview
   //sends a request to an email handler for a subscribed email
-  await sendEmail({
+  const repsonse = await sendEmail({
     from: "Example@outlook.com",
     to: "Example@outlook.com",
     subject: `You have a new email from ${requestBody.parameters.name} on your portfolio`,
@@ -33,16 +33,18 @@ const handler: Handler = async function (event) {
       name: requestBody.parameters.name,
       email: requestBody.parameters.email,
       message: requestBody.parameters.message,
-  },
+    },
   });
 
   console.log("SENT (In theory)", requestBody);
 
+  const repsonseBody = await repsonse.json();
+
   // axios.post
 
   return {
-    statusCode: 200,
-    body: JSON.stringify("Subscribe email sent!"),
+    statusCode: repsonse.status,
+    body: JSON.stringify(repsonseBody),
   };
 };
 

@@ -25,7 +25,7 @@ const handler: Handler = async function (event) {
   //automatically generated snippet from the email preview
   //sends a request to an email handler for a subscribed email
   await sendEmail({
-    from: "lewis@reflr.io",
+    from: "random@email.com",
     to: "lewis.john.thorley@gmail.com",
     subject: `You have a new email from ${requestBody.parameters.name} on your portfolio`,
     template: "contact-email",

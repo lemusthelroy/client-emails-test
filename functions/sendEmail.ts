@@ -24,9 +24,9 @@ const handler: Handler = async function (event) {
 
   //automatically generated snippet from the email preview
   //sends a request to an email handler for a subscribed email
-  const repsonse = await sendEmail({
-    from: "Example@outlook.com",
-    to: "Example@outlook.com",
+  await sendEmail({
+    from: "lewis@reflr.io",
+    to: "lewis.john.thorley@gmail.com",
     subject: `You have a new email from ${requestBody.parameters.name} on your portfolio`,
     template: "contact-email",
     parameters: {
@@ -36,15 +36,11 @@ const handler: Handler = async function (event) {
     },
   });
 
-  console.log("SENT (In theory)", requestBody);
-
-  const repsonseBody = await repsonse.json();
-
   // axios.post
 
   return {
-    statusCode: repsonse.status,
-    body: JSON.stringify(repsonseBody),
+    statusCode: 200,
+    body: JSON.stringify("sent"),
   };
 };
 
